@@ -1,56 +1,108 @@
 .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-      width: 455px;
-      height: 850px;
-      text-align: center;
-      font-size: 32px;
-      border: 3px solid black;
-      padding: 30px;
-      word-wrap: break-word;
-      line-height:55px
-      
-  }
-  span:hover{
-    color: chocolate;
-    cursor: pointer;
-  }
-  body{
-      direction: rtl;
-  }
-.page_number{
-    width: 100%;
-    text-align: center;
-}
-.page_number > span{
-    border: 2px solid #04AA6D ;   
-    border-radius: 50%;
-    padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 850px;
+  /* width: 100%; */
+  width: 525px;
+  overflow-y: hidden;
+  min-height: 80vb;
+  text-align: center;
+  font-size: 32px;
+  border: 3px solid black;
+  padding: 30px;
+  word-wrap: break-word;
+  line-height: 50px;
 }
 
-  a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-    cursor: pointer;
-    user-select: none;
+.select_1 {
+  color: darkorange;
+}
+
+.select_2 {
+  color: darkviolet;
+}
+
+
+.flex {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .page {
+    width: 410px;
+    font-size: 24px;
   }
+}
+
+@media (max-width: 992px) {
+  .page {
+    width: 525px;
+    font-size: 32px;
+  }
+  .left_P {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    width: 410px;
+    font-size: 24px;
+  }
+
+}
+
+@media (max-width: 576px) {}
+
+
+.page span {
+  cursor: pointer;
+}
+
+span:hover {
+  color: chocolate;
+  cursor: pointer;
+}
+
+body {
+  direction: rtl;
+}
+
+.page_number {
+  width: 100%;
+  text-align: center;
   
-  a:hover {
-    background-color: #ddd;
-    color: black;
-  }
- .previous {
-    background-color: #f1f1f1;
-    color: black;
-  }
-  
-  .next {
-    background-color: #04AA6D;
-    color: white;
-  }
+}
+
+.page_number>span {
+  border-radius: 50%;
+  font-size: 16pt;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
 
 
 
-  /* https://web.surahapp.com/pfont/page_1.woff */
+/* https://web.surahapp.com/pfont/page_1.woff */

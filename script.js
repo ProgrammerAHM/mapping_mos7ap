@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    let index = 1
+    let index_l = 2
+    let index_r = 1
     var items = [
         "&#64337;",
         "&#64338;",
@@ -199,7 +200,7 @@ $(document).ready(function () {
                 "&#64361;": "<br>",
                 "&#64370;": "<br>",
                 "&#64377;": "<br>",
-                
+
             }
 
         },
@@ -220,41 +221,111 @@ $(document).ready(function () {
         {},
         {},
     ]
-    function loadpage() {
-        $(".page_number > span").html(index)
+    let select =
+        [
+            {},
+            {},
+            {},
+            {
+                "&#64385;": "1",
+                "&#64419;": "1",
+
+                "&#64360;": "2",
+                "&#64361;": "2",
+                "&#64394;": "2",
+                "&#64395;": "2",
+            },
+            {
+                "&#64385;": "1",
+                "&#64419;": "1",
+
+                "&#64360;": "2",
+                "&#64361;": "2",
+                "&#64394;": "2",
+                "&#64395;": "2",
+            },
+            {},
+        ]
+
+
+    function loadpage(page, index) {
+        $("." + page + " .page_number > span").html(index)
         for (let i = 0; i < items.length; i++) {
             let e = items[i];
-            let listItem = `<span>${e}</span>`;
+
+            // set styles of select
+            let clas = "";
+            try {
+                if (select[index][e]) clas = `class = "select_${select[index][e]}"`
+            }
+            catch (ex) {
+
+            }
+
+            let listItem = `<span ${clas}>${e}</span>`;
             try {
                 if (spec[index]['add'][e]) {
-                    listItem += `<span>${spec[index]['add'][e]}</span>`;
+                    listItem += `<span ${clas}>${spec[index]['add'][e]}</span>`;
 
                 }
             }
             catch (error) { }
-            if (!spec[index]['remove']?.includes(e))
-                $('.page_' + index).append(listItem);
+            try {
+                if (!spec[index]['remove']?.includes(e))
+                    $("." + page + ' .page_' + index).append(listItem);
+
+            }
+            catch (error) {
+                $("." + page + ' .page_' + index).append(listItem);
+
+            }
 
             if (breaks[index] === e) break;
         }
     }
+    loadpage("left_P", index_l)
+    loadpage("right_P", index_r)
     loadpage()
     $("#nextButton").on("click", function () {
-        if (index < 10) {
-            $('.page_' + index).html("")
-            $(".page .page_" + index).removeClass("page_" + index).addClass("page_" + ++index);
-            $(".page_number > span").html(index)
-            loadpage()
+       if ($('.page.left_P').css('display') === 'none') {
+           move("right", 1)
         }
+        else move("right", 2)
     });
     $("#previousButton").on("click", function () {
-
-        if (index >= 2) {
-            $('.page_' + index).html("")
-            $(".page .page_" + index).removeClass("page_" + index).addClass("page_" + --index);
-            $(".page_number > span").html(index)
-            loadpage()
-        }
+        if ($('.page.left_P').css('display') === 'none') {
+            move("left", 1)
+         }
+         else move("left", 2)
     });
-    س
+    // $('#myElement').is(':hidden')
+    function move(direction, steps) {
+
+        for (let i = 0; i < steps; i++) {
+            if (index_r > 1 && direction == "left") {
+                $('.right_P .page_' + index_r).html("")
+                $(".right_P .page_" + index_r).removeClass("page_" + index_r).addClass("page_" + --index_r);
+                $(".right_P .page_number > span").html(index_r)
+                loadpage("right_P", index_r)
+
+                $('.left_P .page_' + index_l).html("")
+                $(".left_P .page_" + index_l).removeClass("page_" + index_l).addClass("page_" + --index_l);
+                $(".left_P .page_number > span").html(index_l)
+                loadpage("left_P", index_l)
+
+            }
+            else if (index_l < 10 && direction == "right") {
+                $('.right_P .page_' + index_r).html("")
+                $(".right_P .page_" + index_r).removeClass("page_" + index_r).addClass("page_" + ++index_r);
+                $(".right_P .page_number > span").html(index_r)
+                loadpage("right_P", index_r)
+
+                $('.left_P .page_' + index_l).html("")
+                $(".left_P .page_" + index_l).removeClass("page_" + index_l).addClass("page_" + ++index_l);
+                $(".left_P .page_number > span").html(index_l)
+                loadpage("left_P", index_l)
+
+            }
+        }
+    }
 });
