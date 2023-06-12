@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "page_1";
+    src: url(pfont/page_1.woff);
+  }
+.page_1{
+    font-family: "page_1", Arial, sans-serif; 
+}
+@font-face {
+    font-family: "page_2";
+    src: url(pfont/page_2.woff);
+  }
+.page_2{
+    font-family: "page_2", Arial, sans-serif; 
+}
+@font-face {
+    font-family: "page_3";
+    src: url(pfont/page_3.woff);
+    }
+    .page_3{
+    font-family: "page_3", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_4";
+    src: url(pfont/page_4.woff);
+    }
+    .page_4{
+    font-family: "page_4", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_5";
+    src: url(pfont/page_5.woff);
+    }
+    .page_5{
+    font-family: "page_5", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_6";
+    src: url(pfont/page_6.woff);
+    }
+    .page_6{
+    font-family: "page_6", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_7";
+    src: url(pfont/page_7.woff);
+    }
+    .page_7{
+    font-family: "page_7", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_8";
+    src: url(pfont/page_8.woff);
+    }
+    .page_8{
+    font-family: "page_8", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_9";
+    src: url(pfont/page_9.woff);
+    }
+    .page_9{
+    font-family: "page_9", Arial, sans-serif;
+    }
+    
+    @font-face {
+    font-family: "page_10";
+    src: url(pfont/page_10.woff);
+    }
+    .page_10{
+    font-family: "page_10", Arial, sans-serif;
+    }
