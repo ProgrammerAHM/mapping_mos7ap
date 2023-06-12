@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 850px;
   /* width: 100%; */
   width: 525px;
   overflow-y: hidden;
@@ -53,9 +52,23 @@
 
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+  .page {
+  padding: 5px;
+  width: 360px;
+  line-height: 40px;
+  min-height: 50vb;
+  font-size: 24px;
+  }
+}
 
-
+.mos7af{
+  height: 100vb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .page span {
   cursor: pointer;
 }
@@ -86,6 +99,7 @@ a {
   padding: 8px 16px;
   cursor: pointer;
   user-select: none;
+  text-decoration: none;
 }
 
 a:hover {
