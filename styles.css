@@ -62,6 +62,16 @@
   }
 }
 
+@media (min-width: 320px) {
+  .page {
+  padding: 5px;
+  width: 290px;
+  line-height: 35px;
+  min-height: 50vb;
+  font-size: 19.1px;
+  }
+}
+
 .mos7af{
   height: 100vb;
   display: flex;
@@ -90,7 +100,7 @@ body {
 
 .page_number>span {
   border-radius: 50%;
-  font-size: 16pt;
+  
 }
 
 a {
