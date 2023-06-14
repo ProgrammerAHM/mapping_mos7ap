@@ -1,6 +1,5 @@
-$(document).ready(function () {
-    let index_l = 2
-    let index_r = 1
+
+    let index = 1
     var items = [
         "&#64337;",
         "&#64338;",
@@ -241,7 +240,7 @@ $(document).ready(function () {
 
 
     function loadpage(page, index) {
-        $("." + page + " .page_number > span").html(index)
+        // $("." + page + " .page_number > span").html(index)
         for (let i = 0; i < items.length; i++) {
             let e = items[i];
 
@@ -264,60 +263,14 @@ $(document).ready(function () {
             catch (error) { }
             try {
                 if (!spec[index]['remove']?.includes(e))
-                    $("." + page + ' .page_' + index).append(listItem);
+                    $(page).append(listItem);
 
             }
             catch (error) {
-                $("." + page + ' .page_' + index).append(listItem);
+                $(page).append(listItem);
 
             }
 
             if (breaks[index] === e) break;
         }
     }
-    loadpage("left_P", index_l)
-    loadpage("right_P", index_r)
-    loadpage()
-    $("#nextButton").on("click", function () {
-       if ($('.page.left_P').css('display') === 'none') {
-           move("right", 1)
-        }
-        else move("right", 2)
-    });
-    $("#previousButton").on("click", function () {
-        if ($('.page.left_P').css('display') === 'none') {
-            move("left", 1)
-         }
-         else move("left", 2)
-    });
-    // $('#myElement').is(':hidden')
-    function move(direction, steps) {
-
-        for (let i = 0; i < steps; i++) {
-            if (index_r > 1 && direction == "left") {
-                $('.right_P .page_' + index_r).html("")
-                $(".right_P .page_" + index_r).removeClass("page_" + index_r).addClass("page_" + --index_r);
-                $(".right_P .page_number > span").html(index_r)
-                loadpage("right_P", index_r)
-
-                $('.left_P .page_' + index_l).html("")
-                $(".left_P .page_" + index_l).removeClass("page_" + index_l).addClass("page_" + --index_l);
-                $(".left_P .page_number > span").html(index_l)
-                loadpage("left_P", index_l)
-
-            }
-            else if (index_l < 10 && direction == "right") {
-                $('.right_P .page_' + index_r).html("")
-                $(".right_P .page_" + index_r).removeClass("page_" + index_r).addClass("page_" + ++index_r);
-                $(".right_P .page_number > span").html(index_r)
-                loadpage("right_P", index_r)
-
-                $('.left_P .page_' + index_l).html("")
-                $(".left_P .page_" + index_l).removeClass("page_" + index_l).addClass("page_" + ++index_l);
-                $(".left_P .page_number > span").html(index_l)
-                loadpage("left_P", index_l)
-
-            }
-        }
-    }
-});
