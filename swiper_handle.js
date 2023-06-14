@@ -8,7 +8,7 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
-$('.swiper-container').on('mousewheel touchmove', function(event) {
+$('.swiper-container').on('mousewheel touchmove', function (event) {
     event.preventDefault();
 });
 let slides = 0
@@ -18,34 +18,40 @@ loaduntill()
 
 swiper.on('slideChange', function () {
     loaduntill()
-    
 });
-function loaduntill(){
+function loaduntill() {
     var currentSlide = swiper.realIndex;
-    console.log(slides , currentSlide + 2)
-    while(  slides < currentSlide + 4 && slides < 10)
-    addNextSlide(slides++)
+    while (slides < currentSlide + 4 && slides < 20)
+        addNextSlide(slides++)
 }
 
 function addNextSlide(slidenum) {
-    
-    console.log(slidenum)        
-        let NSI = slidenum + 1 
-        var slideContent = 
+    let NSI = slidenum + 1
+    var slideContent =
         `
             <div class="swiper-slide">
-                <div class="page page_${NSI}">
-             
+                <div class="page">
+                <div class="page_header">
+                    <span class="sora">سوره البقرة</span>   
+                    <span class="num"> ${NSI} </span>   
+                    <span class="goz2"> جزء : 1</span>   
+                    </div>
+                    <div class="page_${NSI}">
+                    
+                    </div>
+                    <div class="page_footer">
+                       
+                    </div>
                 </div>
             </div>
          `;
 
-        swiper.addSlide(NSI, slideContent);
+    swiper.addSlide(NSI, slideContent);
 
-        loadpage(".page.page_"+NSI, NSI)
-        slides = ++slidenum
-    
-    
+    loadpage(".page .page_" + NSI, NSI)
+    slides = ++slidenum
+
+
 }
 
 function getSlidesPerView() {
@@ -54,7 +60,7 @@ function getSlidesPerView() {
     }
     else {
         return 1; // Show 1 slide on small screens
-    } 
+    }
 }
 // Update slidesPerView on window resize
 window.addEventListener('resize', function () {

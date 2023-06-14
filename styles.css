@@ -6,17 +6,29 @@ body {
 }
 
 .page {
-  width: 525px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow-y: hidden;
-  min-height: 80vb;
   text-align: center;
   font-size: 32px;
   border: 3px solid;
-  padding: 30px;
+  padding: 0 30px;
   word-wrap: break-word;
   line-height: 50px;
+  width: 525px;
+  min-height: 80vb;
 }
-
+.page_headerو.page_footer{
+  height: 15px;
+  font-size: inherit;
+}
+.page_header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: small;
+}
 .select_1 {
   color: darkorange;
 }
@@ -58,7 +70,7 @@ body {
 
 @media (max-width: 576px) {
   .page {
-    padding: 5px;
+    padding: 0 5px;
     width: 360px;
     line-height: 40px;
     min-height: 50vb;
@@ -68,7 +80,7 @@ body {
 
 @media (max-width: 400px) {
   .page {
-    padding: 5px;
+    padding: 0 5px;
     width: 290px;
     line-height: 35px;
     min-height: 50vb;
@@ -77,13 +89,15 @@ body {
 }
 @media (max-width: 320px) {
   .page {
-    padding: 5px;
+    padding: 0 5px;
     width: 200px;
     line-height: 25px;
     min-height: 50vb;
     font-size: 12.5px;
   }
 }
+
+
 
 .mos7af {
   height: 100vb;
@@ -137,6 +151,7 @@ a:hover {
   background-color: #04AA6D;
   color: white;
 }
+
 
 
 /* https://web.surahapp.com/pfont/page_1.woff */

@@ -85,3 +85,92 @@
     .page_10{
     font-family: "page_10", Arial, sans-serif;
     }
+    @font-face {
+      font-family: "page_11";
+      src: url(pfont/page_11.woff);
+      font-display: swap;
+  }
+  .page_11 {
+      font-family: "page_11", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_12";
+      src: url(pfont/page_12.woff);
+      font-display: swap;
+  }
+  .page_12 {
+      font-family: "page_12", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_13";
+      src: url(pfont/page_13.woff);
+      font-display: swap;
+  }
+  .page_13 {
+      font-family: "page_13", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_14";
+      src: url(pfont/page_14.woff);
+      font-display: swap;
+  }
+  .page_14 {
+      font-family: "page_14", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_15";
+      src: url(pfont/page_15.woff);
+      font-display: swap;
+  }
+  .page_15 {
+      font-family: "page_15", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_16";
+      src: url(pfont/page_16.woff);
+      font-display: swap;
+  }
+  .page_16 {
+      font-family: "page_16", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_17";
+      src: url(pfont/page_17.woff);
+      font-display: swap;
+  }
+  .page_17 {
+      font-family: "page_17", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_18";
+      src: url(pfont/page_18.woff);
+      font-display: swap;
+  }
+  .page_18 {
+      font-family: "page_18", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_19";
+      src: url(pfont/page_19.woff);
+      font-display: swap;
+  }
+  .page_19 {
+      font-family: "page_19", Arial, sans-serif;
+  }
+  
+  @font-face {
+      font-family: "page_20";
+      src: url(pfont/page_20.woff);
+      font-display: swap;
+  }
+  .page_20 {
+      font-family: "page_20", Arial, sans-serif;
+  }
