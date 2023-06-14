@@ -8,6 +8,9 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+$('.swiper-container').on('mousewheel touchmove', function(event) {
+    event.preventDefault();
+});
 let slides = 0
 
 loaduntill()

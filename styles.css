@@ -2,6 +2,7 @@ body {
   direction: rtl;
   background-color: black;
   color: #777;
+  overflow-y: hidden;
 }
 
 .page {
